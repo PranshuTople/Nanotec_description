@@ -1,16 +1,16 @@
 <?xml version="1.0" ?>
 
-<robot name="Nanotec" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="nanotec" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 <xacro:include filename="$(find Nanotec_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find Nanotec_description)/urdf/Nanotec.trans" />
-<xacro:include filename="$(find Nanotec_description)/urdf/Nanotec.gazebo" />
+<xacro:include filename="$(find Nanotec_description)/urdf/nanotec.gazebo" />
+<xacro:include filename="$(find Nanotec_description)/urdf/_d435.urdf.xacro" />
 
 <link name="base_link">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.25972982131578615 0.18445226294457726 0.24826496101086126"/>
-    <mass value="41.69708021946303"/>
-    <inertia ixx="2.279118" ixy="-0.0" ixz="0.051268" iyy="2.748862" iyz="-0.0" izz="4.303252"/>
+    <origin rpy="0 0 0" xyz="0.011049838369709651 0.0002546055855634677 0.24817005362792469"/>
+    <mass value="41.95813646946303"/>
+    <inertia ixx="2.282596" ixy="-0.0" ixz="0.047567" iyy="2.756355" iyz="-0.0" izz="4.30745"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -29,19 +29,19 @@
 
 <link name="wheeltire_left_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.4165265677101857e-07 -0.01499973705541846 -4.045972316832347e-07"/>
+    <origin rpy="0 0 0" xyz="1.4165265724698332e-07 -0.015000394414425522 2.5276178247657377e-07"/>
     <mass value="0.1117543046698229"/>
     <inertia ixx="0.000112" ixy="0.0" ixz="0.0" iyy="0.000208" iyz="0.0" izz="0.000112"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.270554 -0.464452 -0.051102"/>
+    <origin rpy="0 0 0" xyz="0.000554 -0.280255 -0.050299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/wheeltire_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="red"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.270554 -0.464452 -0.051102"/>
+    <origin rpy="0 0 0" xyz="0.000554 -0.280255 -0.050299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/wheeltire_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -50,19 +50,19 @@
 
 <link name="wheelhub_left_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.4165265677101857e-07 -0.01499973705541846 -4.0459723171099027e-07"/>
+    <origin rpy="0 0 0" xyz="1.4165265721380674e-07 -0.015000394414425522 2.527617824488182e-07"/>
     <mass value="0.31172453105244713"/>
-    <inertia ixx="0.000119" ixy="0.0" ixz="0.0" iyy="0.000191" iyz="0.0" izz="0.000119"/>
+    <inertia ixx="0.000119" ixy="-0.0" ixz="0.0" iyy="0.000191" iyz="0.0" izz="0.000119"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.270554 -0.464452 -0.051102"/>
+    <origin rpy="0 0 0" xyz="0.000554 -0.280255 -0.050299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/wheelhub_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="white"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.270554 -0.464452 -0.051102"/>
+    <origin rpy="0 0 0" xyz="0.000554 -0.280255 -0.050299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/wheelhub_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -71,19 +71,19 @@
 
 <link name="motor_left_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.4165265682652972e-07 -0.0863039129491231 -4.0459723447267004e-07"/>
+    <origin rpy="0 0 0" xyz="1.4165265729544716e-07 -0.08630457030813007 2.5276177622463036e-07"/>
     <mass value="0.9384392787207482"/>
     <inertia ixx="0.00263" ixy="0.0" ixz="0.0" iyy="0.00029" iyz="-0.0" izz="0.00263"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.270554 -0.429452 -0.051102"/>
+    <origin rpy="0 0 0" xyz="0.000554 -0.245255 -0.050299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/motor_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="darkgrey"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.270554 -0.429452 -0.051102"/>
+    <origin rpy="0 0 0" xyz="0.000554 -0.245255 -0.050299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/motor_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -92,19 +92,19 @@
 
 <link name="wheeltire_right_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.4165265715959663e-07 0.015000262944581233 -4.045972454500002e-07"/>
+    <origin rpy="0 0 0" xyz="1.4165265762948985e-07 0.014999605585574338 2.5276175140420687e-07"/>
     <mass value="0.1117543046698229"/>
-    <inertia ixx="0.000112" ixy="0.0" ixz="0.0" iyy="0.000208" iyz="0.0" izz="0.000112"/>
+    <inertia ixx="0.000112" ixy="-0.0" ixz="0.0" iyy="0.000208" iyz="0.0" izz="0.000112"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.270554 0.095548 -0.051102"/>
+    <origin rpy="0 0 0" xyz="0.000554 0.279745 -0.050299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/wheeltire_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="red"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.270554 0.095548 -0.051102"/>
+    <origin rpy="0 0 0" xyz="0.000554 0.279745 -0.050299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/wheeltire_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -113,19 +113,19 @@
 
 <link name="wheelhub_right_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.4165265710408548e-07 0.015000262944581094 -4.045972454777558e-07"/>
+    <origin rpy="0 0 0" xyz="1.4165265759620484e-07 0.014999605585574227 2.527617513695124e-07"/>
     <mass value="0.31172453105244713"/>
-    <inertia ixx="0.000119" ixy="-0.0" ixz="0.0" iyy="0.000191" iyz="0.0" izz="0.000119"/>
+    <inertia ixx="0.000119" ixy="-0.0" ixz="0.0" iyy="0.000191" iyz="-0.0" izz="0.000119"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.270554 0.095548 -0.051102"/>
+    <origin rpy="0 0 0" xyz="0.000554 0.279745 -0.050299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/wheelhub_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="white"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.270554 0.095548 -0.051102"/>
+    <origin rpy="0 0 0" xyz="0.000554 0.279745 -0.050299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/wheelhub_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -134,19 +134,19 @@
 
 <link name="motor_right_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.4165265704857433e-07 0.08630443883828576 -4.04597242716076e-07"/>
+    <origin rpy="0 0 0" xyz="1.4165265752443066e-07 0.08630378147927878 2.52761757607578e-07"/>
     <mass value="0.9384392787207482"/>
     <inertia ixx="0.00263" ixy="0.0" ixz="0.0" iyy="0.00029" iyz="-0.0" izz="0.00263"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.270554 0.060548 -0.051102"/>
+    <origin rpy="0 0 0" xyz="0.000554 0.244745 -0.050299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/motor_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="darkgrey"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.270554 0.060548 -0.051102"/>
+    <origin rpy="0 0 0" xyz="0.000554 0.244745 -0.050299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/motor_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -155,19 +155,19 @@
 
 <link name="monitor_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.013786334409840232 2.6294457775022373e-07 -0.014489381805139145"/>
+    <origin rpy="0 0 0" xyz="-0.013786334409839895 -3.9441443539547623e-07 -0.014488724446133777"/>
     <mass value="1.8708306759998974"/>
     <inertia ixx="0.011352" ixy="-0.0" ixz="0.00262" iyy="0.005746" iyz="-0.0" izz="0.011613"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.005481 -0.184452 -0.25358"/>
+    <origin rpy="0 0 0" xyz="-0.264519 -0.000255 -0.252777"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/monitor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="black"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.005481 -0.184452 -0.25358"/>
+    <origin rpy="0 0 0" xyz="-0.264519 -0.000255 -0.252777"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/monitor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -176,61 +176,40 @@
 
 <link name="upper_plate_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.4165265654897397e-07 2.6294457372566526e-07 -0.0025004037776748533"/>
-    <mass value="0.9063"/>
-    <inertia ixx="0.00979" ixy="0.0" ixz="0.0" iyy="0.017042" iyz="-0.0" izz="0.026828"/>
+    <origin rpy="0 0 0" xyz="0.09156293528538237 -3.9441444431276805e-07 0.025808655487142007"/>
+    <mass value="3.5886158783049393"/>
+    <inertia ixx="0.025178" ixy="0.0" ixz="-0.003143" iyy="0.034383" iyz="-0.0" izz="0.054096"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.393054 -0.184452 -0.343102"/>
+    <origin rpy="0 0 0" xyz="0.123054 -0.000255 -0.342299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/upper_plate_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="black"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.393054 -0.184452 -0.343102"/>
+    <origin rpy="0 0 0" xyz="0.123054 -0.000255 -0.342299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/upper_plate_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<link name="lidar_1">
-  <inertial>
-    <origin rpy="0 0 0" xyz="1.4165265629917378e-07 2.6294457330933163e-07 0.01934533262916749"/>
-    <mass value="0.4613148317125811"/>
-    <inertia ixx="0.000461" ixy="-0.0" ixz="0.0" iyy="0.000461" iyz="-0.0" izz="0.000804"/>
-  </inertial>
-  <visual>
-    <origin rpy="0 0 0" xyz="0.180554 -0.184452 -0.343102"/>
-    <geometry>
-      <mesh filename="package://Nanotec_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="red"/>
-  </visual>
-  <collision>
-    <origin rpy="0 0 0" xyz="0.180554 -0.184452 -0.343102"/>
-    <geometry>
-      <mesh filename="package://Nanotec_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
 <link name="caster_rf_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.4165265687510198e-07 2.63317110123229e-07 -0.04732061236663117"/>
+    <origin rpy="0 0 0" xyz="1.4165265704857433e-07 -3.940418971393189e-07 -0.047319955007633016"/>
     <mass value="0.4397386383040941"/>
-    <inertia ixx="0.000485" ixy="-0.0" ixz="0.0" iyy="0.000485" iyz="0.0" izz="0.000294"/>
+    <inertia ixx="0.000485" ixy="-0.0" ixz="0.0" iyy="0.000485" iyz="-0.0" izz="0.000294"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.049446 0.035548 -0.106102"/>
+    <origin rpy="0 0 0" xyz="-0.319446 0.219745 -0.105299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/caster_rf_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="darkgrey"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.049446 0.035548 -0.106102"/>
+    <origin rpy="0 0 0" xyz="-0.319446 0.219745 -0.105299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/caster_rf_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -239,19 +218,19 @@
 
 <link name="caster_lf_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.4165265655591286e-07 2.625720524895847e-07 -0.047320612366619746"/>
+    <origin rpy="0 0 0" xyz="1.4165265677101857e-07 -3.947869547937799e-07 -0.0473199550076071"/>
     <mass value="0.4397386383040942"/>
     <inertia ixx="0.000485" ixy="0.0" ixz="0.0" iyy="0.000485" iyz="0.0" izz="0.000294"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.049446 -0.404452 -0.106102"/>
+    <origin rpy="0 0 0" xyz="-0.319446 -0.220255 -0.105299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/caster_lf_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="darkgrey"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.049446 -0.404452 -0.106102"/>
+    <origin rpy="0 0 0" xyz="-0.319446 -0.220255 -0.105299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/caster_lf_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -260,19 +239,19 @@
 
 <link name="caster_rb_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.4165265715959663e-07 2.633171096999565e-07 -0.04732061236663218"/>
+    <origin rpy="0 0 0" xyz="1.416526578812416e-07 -3.9404189755565255e-07 -0.04731995500763395"/>
     <mass value="0.4397386383040941"/>
-    <inertia ixx="0.000485" ixy="0.0" ixz="0.0" iyy="0.000485" iyz="0.0" izz="0.000294"/>
+    <inertia ixx="0.000485" ixy="0.0" ixz="0.0" iyy="0.000485" iyz="-0.0" izz="0.000294"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.590554 0.035548 -0.106102"/>
+    <origin rpy="0 0 0" xyz="0.320554 0.219745 -0.105299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/caster_rb_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="darkgrey"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.590554 0.035548 -0.106102"/>
+    <origin rpy="0 0 0" xyz="0.320554 0.219745 -0.105299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/caster_rb_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -281,19 +260,19 @@
 
 <link name="caster_lb_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.4165265682652972e-07 2.625720521565178e-07 -0.04732061236662074"/>
+    <origin rpy="0 0 0" xyz="1.4165265760368584e-07 -3.947869552656247e-07 -0.04731995500760803"/>
     <mass value="0.4397386383040941"/>
     <inertia ixx="0.000485" ixy="-0.0" ixz="0.0" iyy="0.000485" iyz="0.0" izz="0.000294"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.590554 -0.404452 -0.106102"/>
+    <origin rpy="0 0 0" xyz="0.320554 -0.220255 -0.105299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/caster_lb_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="darkgrey"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.590554 -0.404452 -0.106102"/>
+    <origin rpy="0 0 0" xyz="0.320554 -0.220255 -0.105299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/caster_lb_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -302,19 +281,19 @@
 
 <link name="us_front_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.010000141652656586 2.63317110449357e-07 -4.037776741294685e-07"/>
+    <origin rpy="0 0 0" xyz="0.010000141652656835 -3.940418989759574e-07 2.5358133126651694e-07"/>
     <mass value="0.01908"/>
     <inertia ixx="4e-06" ixy="0.0" ixz="0.0" iyy="1e-06" iyz="-0.0" izz="4e-06"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.089446 -0.184452 -0.126102"/>
+    <origin rpy="0 0 0" xyz="-0.359446 -0.000255 -0.125299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/us_front_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="blue"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.089446 -0.184452 -0.126102"/>
+    <origin rpy="0 0 0" xyz="-0.359446 -0.000255 -0.125299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/us_front_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -323,19 +302,19 @@
 
 <link name="us_left_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.4165265688204087e-07 0.010000262572050611 -4.0377766774568613e-07"/>
+    <origin rpy="0 0 0" xyz="1.416526584685539e-07 0.009999605213040663 2.535813463377945e-07"/>
     <mass value="0.01908"/>
-    <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="4e-06" iyz="0.0" izz="4e-06"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="4e-06" iyz="-0.0" izz="4e-06"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.270554 -0.444452 -0.126102"/>
+    <origin rpy="0 0 0" xyz="0.000554 -0.260255 -0.125299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/us_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="blue"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.270554 -0.444452 -0.126102"/>
+    <origin rpy="0 0 0" xyz="0.000554 -0.260255 -0.125299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/us_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -344,19 +323,19 @@
 
 <link name="us_right_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.4165265688204087e-07 -0.00999973668289214 -4.037776816512295e-07"/>
+    <origin rpy="0 0 0" xyz="1.4165265726064427e-07 -0.010000394041901783 2.5358131486297175e-07"/>
     <mass value="0.01908"/>
-    <inertia ixx="1e-06" ixy="-0.0" ixz="0.0" iyy="4e-06" iyz="0.0" izz="4e-06"/>
+    <inertia ixx="1e-06" ixy="-0.0" ixz="0.0" iyy="4e-06" iyz="-0.0" izz="4e-06"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.270554 0.075548 -0.126102"/>
+    <origin rpy="0 0 0" xyz="0.000554 0.259745 -0.125299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/us_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="blue"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.270554 0.075548 -0.126102"/>
+    <origin rpy="0 0 0" xyz="0.000554 0.259745 -0.125299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/us_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -365,19 +344,19 @@
 
 <link name="us_backright_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.00999985834734296 2.633171077787502e-07 -4.0377768026345073e-07"/>
+    <origin rpy="0 0 0" xyz="-0.009999858347342405 -3.940419014969443e-07 2.535813189985525e-07"/>
     <mass value="0.01908"/>
     <inertia ixx="4e-06" ixy="-0.0" ixz="0.0" iyy="1e-06" iyz="-0.0" izz="4e-06"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.630554 0.005548 -0.126102"/>
+    <origin rpy="0 0 0" xyz="0.360554 0.189745 -0.125299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/us_backright_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="blue"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.630554 0.005548 -0.126102"/>
+    <origin rpy="0 0 0" xyz="0.360554 0.189745 -0.125299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/us_backright_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -386,19 +365,19 @@
 
 <link name="us_backleft_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.009999858347343293 2.625720498805606e-07 -4.0377767021593236e-07"/>
+    <origin rpy="0 0 0" xyz="-0.009999858347342683 -3.94786959428961e-07 2.5358134150832434e-07"/>
     <mass value="0.01908"/>
-    <inertia ixx="4e-06" ixy="0.0" ixz="0.0" iyy="1e-06" iyz="0.0" izz="4e-06"/>
+    <inertia ixx="4e-06" ixy="-0.0" ixz="0.0" iyy="1e-06" iyz="-0.0" izz="4e-06"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.630554 -0.374452 -0.126102"/>
+    <origin rpy="0 0 0" xyz="0.360554 -0.190255 -0.125299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/us_backleft_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="blue"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.630554 -0.374452 -0.126102"/>
+    <origin rpy="0 0 0" xyz="0.360554 -0.190255 -0.125299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/us_backleft_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -407,19 +386,19 @@
 
 <link name="us_frontright_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.416526595743317e-07 2.633171114069244e-07 0.009999596222319149"/>
+    <origin rpy="0 0 0" xyz="1.4165265971310959e-07 -3.9404189799974176e-07 0.010000253581316024"/>
     <mass value="0.019079999999999948"/>
     <inertia ixx="3e-06" ixy="-1e-06" ixz="0.0" iyy="3e-06" iyz="0.0" izz="4e-06"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.084446 0.070548 -0.116102"/>
+    <origin rpy="0 0 0" xyz="-0.354446 0.254745 -0.115299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/us_frontright_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="blue"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.084446 0.070548 -0.116102"/>
+    <origin rpy="0 0 0" xyz="-0.354446 0.254745 -0.115299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/us_frontright_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -428,24 +407,49 @@
 
 <link name="us_frontleft_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.4165265602161803e-07 2.62572050768739e-07 0.009999596222332444"/>
+    <origin rpy="0 0 0" xyz="1.416526562714182e-07 -3.947869587905828e-07 0.010000253581346166"/>
     <mass value="0.019079999999999975"/>
-    <inertia ixx="3e-06" ixy="1e-06" ixz="0.0" iyy="3e-06" iyz="0.0" izz="4e-06"/>
+    <inertia ixx="3e-06" ixy="1e-06" ixz="0.0" iyy="3e-06" iyz="-0.0" izz="4e-06"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.084446 -0.439452 -0.116102"/>
+    <origin rpy="0 0 0" xyz="-0.354446 -0.255255 -0.115299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/us_frontleft_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="blue"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.084446 -0.439452 -0.116102"/>
+    <origin rpy="0 0 0" xyz="-0.354446 -0.255255 -0.115299"/>
     <geometry>
       <mesh filename="package://Nanotec_description/meshes/us_frontleft_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.4165265742045567e-07 -3.944144499615698e-07 0.01934598998817294"/>
+    <mass value="0.4613148317125811"/>
+    <inertia ixx="0.000461" ixy="-0.0" ixz="-0.0" iyy="0.000461" iyz="-0.0" izz="0.000804"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.000554 -0.000255 -0.442299"/>
+    <geometry>
+      <mesh filename="package://Nanotec_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.000554 -0.000255 -0.442299"/>
+    <geometry>
+      <mesh filename="package://Nanotec_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<sensor_d435 parent="base_link">
+    <origin xyz="0.154446 0.000255 0.382299" rpy="0 0 0"/>
+  </sensor_d435>
 
 <joint name="Rigid1" type="fixed">
   <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
@@ -458,19 +462,10 @@
   <parent link="motor_left_1"/>
   <child link="wheelhub_left_1"/>
   <axis xyz="0.0 0.01 0.0"/>
-  <joint_properties damping='1.0' friction='1.0'/>
-</joint>
-
-<joint name="motorrev_right" type="continuous">
-  <origin rpy="0 0 0" xyz="0.0 -0.035 0.0"/>
-  <parent link="motor_right_1"/>
-  <child link="wheelhub_right_1"/>
-  <axis xyz="0.0 0.01 0.0"/>
-  <joint_properties damping='1.0' friction='1.0'/>
 </joint>
 
 <joint name="Rigid3" type="fixed">
-  <origin rpy="0 0 0" xyz="-0.270554 0.429452 0.051102"/>
+  <origin rpy="0 0 0" xyz="-0.000554 0.245255 0.050299"/>
   <parent link="base_link"/>
   <child link="motor_left_1"/>
 </joint>
@@ -481,94 +476,101 @@
   <child link="wheeltire_right_1"/>
 </joint>
 
+<joint name="motorrev_right" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 -0.035 0.0"/>
+  <parent link="motor_right_1"/>
+  <child link="wheelhub_right_1"/>
+  <axis xyz="0.0 0.01 -0.0"/>
+</joint>
+
 <joint name="Rigid6" type="fixed">
-  <origin rpy="0 0 0" xyz="-0.270554 -0.060548 0.051102"/>
+  <origin rpy="0 0 0" xyz="-0.000554 -0.244745 0.050299"/>
   <parent link="base_link"/>
   <child link="motor_right_1"/>
 </joint>
 
 <joint name="Rigid7" type="fixed">
-  <origin rpy="0 0 0" xyz="-0.005481 0.184452 0.25358"/>
+  <origin rpy="0 0 0" xyz="0.264519 0.000255 0.252777"/>
   <parent link="base_link"/>
   <child link="monitor_1"/>
 </joint>
 
 <joint name="Rigid8" type="fixed">
-  <origin rpy="0 0 0" xyz="-0.393054 0.184452 0.343102"/>
+  <origin rpy="0 0 0" xyz="-0.123054 0.000255 0.342299"/>
   <parent link="base_link"/>
   <child link="upper_plate_1"/>
 </joint>
 
-<joint name="Rigid9" type="fixed">
-  <origin rpy="0 0 0" xyz="-0.180554 0.184452 0.353102"/>
-  <parent link="base_link"/>
-  <child link="lidar_1"/>
-</joint>
-
 <joint name="Rigid10" type="fixed">
-  <origin rpy="0 0 0" xyz="0.049446 -0.035548 0.106102"/>
+  <origin rpy="0 0 0" xyz="0.319446 -0.219745 0.105299"/>
   <parent link="base_link"/>
   <child link="caster_rf_1"/>
 </joint>
 
 <joint name="Rigid11" type="fixed">
-  <origin rpy="0 0 0" xyz="0.049446 0.404452 0.106102"/>
+  <origin rpy="0 0 0" xyz="0.319446 0.220255 0.105299"/>
   <parent link="base_link"/>
   <child link="caster_lf_1"/>
 </joint>
 
 <joint name="Rigid12" type="fixed">
-  <origin rpy="0 0 0" xyz="-0.590554 -0.035548 0.106102"/>
+  <origin rpy="0 0 0" xyz="-0.320554 -0.219745 0.105299"/>
   <parent link="base_link"/>
   <child link="caster_rb_1"/>
 </joint>
 
 <joint name="Rigid13" type="fixed">
-  <origin rpy="0 0 0" xyz="-0.590554 0.404452 0.106102"/>
+  <origin rpy="0 0 0" xyz="-0.320554 0.220255 0.105299"/>
   <parent link="base_link"/>
   <child link="caster_lb_1"/>
 </joint>
 
 <joint name="Rigid14" type="fixed">
-  <origin rpy="0 0 0" xyz="0.089446 0.184452 0.126102"/>
+  <origin rpy="0 0 0" xyz="0.359446 0.000255 0.125299"/>
   <parent link="base_link"/>
   <child link="us_front_1"/>
 </joint>
 
 <joint name="Rigid15" type="fixed">
-  <origin rpy="0 0 0" xyz="-0.270554 0.444452 0.126102"/>
+  <origin rpy="0 0 0" xyz="-0.000554 0.260255 0.125299"/>
   <parent link="base_link"/>
   <child link="us_left_1"/>
 </joint>
 
 <joint name="Rigid16" type="fixed">
-  <origin rpy="0 0 0" xyz="-0.270554 -0.075548 0.126102"/>
+  <origin rpy="0 0 0" xyz="-0.000554 -0.259745 0.125299"/>
   <parent link="base_link"/>
   <child link="us_right_1"/>
 </joint>
 
 <joint name="Rigid17" type="fixed">
-  <origin rpy="0 0 0" xyz="-0.630554 -0.005548 0.126102"/>
+  <origin rpy="0 0 0" xyz="-0.360554 -0.189745 0.125299"/>
   <parent link="base_link"/>
   <child link="us_backright_1"/>
 </joint>
 
 <joint name="Rigid18" type="fixed">
-  <origin rpy="0 0 0" xyz="-0.630554 0.374452 0.126102"/>
+  <origin rpy="0 0 0" xyz="-0.360554 0.190255 0.125299"/>
   <parent link="base_link"/>
   <child link="us_backleft_1"/>
 </joint>
 
 <joint name="Rigid19" type="fixed">
-  <origin rpy="0 0 0" xyz="0.084446 -0.070548 0.116102"/>
+  <origin rpy="0 0 0" xyz="0.354446 -0.254745 0.115299"/>
   <parent link="base_link"/>
   <child link="us_frontright_1"/>
 </joint>
 
 <joint name="Rigid20" type="fixed">
-  <origin rpy="0 0 0" xyz="0.084446 0.439452 0.116102"/>
+  <origin rpy="0 0 0" xyz="0.354446 0.255255 0.115299"/>
   <parent link="base_link"/>
   <child link="us_frontleft_1"/>
+</joint>
+
+<joint name="Rigid21" type="fixed">
+  <origin rpy="0 0 0" xyz="0.1225 0.0 0.1"/>
+  <parent link="upper_plate_1"/>
+  <child link="lidar_1"/>
 </joint>
 
 </robot>

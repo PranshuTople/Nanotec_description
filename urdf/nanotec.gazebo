@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot name="Nanotec" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+<robot name="nanotec" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
 <xacro:property name="silver" value="Gazebo/Silver" />
 <xacro:property name="red" value="Gazebo/Red" />
@@ -10,26 +10,26 @@
 
 <gazebo>
   <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
-  	<robotNamespace>/nanotec</robotNamespace>
-  	<robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-  	<legacyModeNS>true</legacyModeNS>
+    <robotNamespace>/nanotec</robotNamespace>
+    <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    <legacyModeNS>true</legacyModeNS>
   </plugin>
 </gazebo>
 
 <gazebo>
-	<plugin filename="libgazebo_ros_diff_drive.so" name="differential_drive_controller">
-		<legacyMode>false</legacyMode>
-		<alwaysOn>true</alwaysOn>
-		<updateRate>20</updateRate>
-		<leftJoint>motorrev_left</leftJoint>
-		<rightJoint>motorrev_right</rightJoint>
-		<wheelSeparation>0.56</wheelSeparation>
-		<wheelDiameter>0.1</wheelDiameter>
-		<commandTopic>cmd_vel</commandTopic>
-		<odometryTopic>odom</odometryTopic>
-		<odometryFrame>odom</odometryFrame>
-		<robotBaseFrame>base_link</robotBaseFrame>
-	</plugin>
+  <plugin filename="libgazebo_ros_diff_drive.so" name="differential_drive_controller">
+    <legacyMode>false</legacyMode>
+    <alwaysOn>true</alwaysOn>
+    <updateRate>20</updateRate>
+    <leftJoint>motorrev_left</leftJoint>
+    <rightJoint>motorrev_right</rightJoint>
+    <wheelSeparation>0.56</wheelSeparation>
+    <wheelDiameter>0.1</wheelDiameter>
+    <commandTopic>cmd_vel</commandTopic>
+    <odometryTopic>odom</odometryTopic>
+    <odometryFrame>odom</odometryFrame>
+    <robotBaseFrame>base_link</robotBaseFrame>
+  </plugin>
 </gazebo>
 
 <gazebo reference="lidar_1">
@@ -62,7 +62,7 @@
         <frameName>lidar_1</frameName>
       </plugin>
     </sensor>
-  </gazebo>
+</gazebo>
 
 <gazebo reference="base_link">
   <material>${silver}</material>
@@ -127,13 +127,6 @@
 
 <gazebo reference="upper_plate_1">
   <material>${black}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="lidar_1">
-  <material>${red}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
@@ -219,6 +212,20 @@
 
 <gazebo reference="us_frontleft_1">
   <material>${blue}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="lidar_1">
+  <material>${red}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="realsense_1">
+  <material>${black}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
