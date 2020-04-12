@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot name="nanotec" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+<robot name="Nanotec" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
 <xacro:property name="silver" value="Gazebo/Silver" />
 <xacro:property name="red" value="Gazebo/Red" />
@@ -32,7 +32,7 @@
   </plugin>
 </gazebo>
 
-<gazebo reference="lidar_1">
+<gazebo reference="lidartop_1">
     <sensor type="ray" name="head_hokuyo_sensor">
       <pose>0 0 0 0 0 0</pose>
       <visualize>false</visualize>
@@ -42,13 +42,13 @@
           <horizontal>
             <samples>720</samples>
             <resolution>1</resolution>
-            <min_angle>-3.14159</min_angle>
-            <max_angle>3.14159</max_angle>
+            <min_angle>-2.35619</min_angle>
+            <max_angle>2.35619</max_angle>
           </horizontal>
         </scan>
         <range>
-          <min>0.15</min>
-          <max>12.0</max>
+          <min>0.05</min>
+          <max>10.0</max>
           <resolution>0.01</resolution>
         </range>
         <noise>
@@ -59,7 +59,7 @@
       </ray>
       <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
         <topicName>/nanotec/laser/scan</topicName>
-        <frameName>lidar_1</frameName>
+        <frameName>lidartop_1</frameName>
       </plugin>
     </sensor>
 </gazebo>
@@ -89,7 +89,7 @@
 </gazebo>
 
 <gazebo reference="motor_left_1">
-  <material>${silver}</material>
+  <material>${darkgrey}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
@@ -112,7 +112,7 @@
 </gazebo>
 
 <gazebo reference="motor_right_1">
-  <material>${silver}</material>
+  <material>${darkgrey}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
@@ -217,14 +217,28 @@
   <selfCollide>true</selfCollide>
 </gazebo>
 
-<gazebo reference="lidar_1">
-  <material>${red}</material>
+<gazebo reference="lidartop_1">
+  <material>${black}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
-<gazebo reference="realsense_1">
+<gazebo reference="lidarbase_1">
+  <material>${black}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="sickbase_1">
+  <material>${white}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="notrealsense_1">
   <material>${black}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
