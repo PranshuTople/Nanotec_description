@@ -4,9 +4,11 @@
 <xacro:property name="silver" value="Gazebo/Silver" />
 <xacro:property name="red" value="Gazebo/Red" />
 <xacro:property name="blue" value="Gazebo/Blue" />
+<xacro:property name="skyblue" value="Gazebo/BlueGlow" />
 <xacro:property name="black" value="Gazebo/Black" />
 <xacro:property name="white" value="Gazebo/White" />
 <xacro:property name="darkgrey" value="Gazebo/DarkGrey" />
+<xacro:property name="grey" value="Gazebo/Grey" />
 
 <gazebo>
   <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
@@ -133,7 +135,7 @@
 </gazebo>
 
 <gazebo reference="caster_rf_1">
-  <material>${darkgrey}</material>
+  <material>${grey}</material>
   <mu1>0</mu1>
   <mu2>0</mu2>
   <slip1>1.0</slip1>
@@ -142,7 +144,7 @@
 </gazebo>
 
 <gazebo reference="caster_lf_1">
-  <material>${darkgrey}</material>
+  <material>${grey}</material>
   <mu1>0</mu1>
   <mu2>0</mu2>
   <slip1>1.0</slip1>
@@ -151,7 +153,7 @@
 </gazebo>
 
 <gazebo reference="caster_rb_1">
-  <material>${darkgrey}</material>
+  <material>${grey}</material>
   <mu1>0</mu1>
   <mu2>0</mu2>
   <slip1>1.0</slip1>
@@ -160,7 +162,7 @@
 </gazebo>
 
 <gazebo reference="caster_lb_1">
-  <material>${darkgrey}</material>
+  <material>${grey}</material>
   <mu1>0</mu1>
   <mu2>0</mu2>
   <slip1>1.0</slip1>
@@ -232,14 +234,7 @@
 </gazebo>
 
 <gazebo reference="sickbase_1">
-  <material>${white}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="notrealsense_1">
-  <material>${black}</material>
+  <material>${skyblue}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
